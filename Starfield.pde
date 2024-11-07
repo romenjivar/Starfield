@@ -7,7 +7,7 @@ void setup(){
 // bob = new Particle();
 for(int i = 0; i < circles.length; i++){
 circles[i] = new Particle();
-  circles[0] = new OddballParticle();
+  circles[499] = new OddballParticle();
   }
 }
 
@@ -22,6 +22,7 @@ void draw(){
 void mousePressed(){
  for(int i = 0; i < circles.length; i++){
    circles[i] = new Particle();
+   circles[499] = new OddballParticle();
  }
 }
 
@@ -52,14 +53,15 @@ class Particle{
 
 class OddballParticle extends Particle{
   OddballParticle(){
-    myX = 400;
-    myY = 400;
+    myX = 400-37;
+    myY = 400-37;
+    mySpeed = Math.random()*3;
   }
   void move(){
-   myX += Math.random()*5-2.5;
-   myY += Math.random()*5-2.5;
+   myX += Math.cos(myAngle)*mySpeed;
+   myY += Math.sin(myAngle)*mySpeed;
   }
   void show(){
-    image(smileyFace, (float)myX, (float)myY);
+    image(smileyFace, (float)myX, (float)myY, 75,75);
   }
 }
