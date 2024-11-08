@@ -5,9 +5,11 @@ void setup(){
   size(800,800);
  smileyFace = loadImage("SMILEY.png"); 
 // bob = new Particle();
-for(int i = 0; i < circles.length; i++){
-circles[i] = new Particle();
-  circles[499] = new OddballParticle();
+for(int i = 0; i < 10; i++){
+    circles[i] = new OddballParticle();
+  }
+for(int i = 10; i < circles.length; i++){
+    circles[i] = new Particle();
   }
 }
 
@@ -20,10 +22,12 @@ void draw(){
 }
 
 void mousePressed(){
- for(int i = 0; i < circles.length; i++){
-   circles[i] = new Particle();
-   circles[499] = new OddballParticle();
- }
+for(int i = 0; i < 10; i++){
+    circles[i] = new OddballParticle();
+  }
+for(int i = 10; i < circles.length; i++){
+    circles[i] = new Particle();
+  }
 }
 
 class Particle{
