@@ -3,7 +3,7 @@ PImage smileyFace;
 Particle [] circles = new Particle [500];
 void setup(){
   size(800,800);
- smileyFace = loadImage("SMILEY.png"); 
+ smileyFace = loadImage("SMILEY-2.png"); 
 // bob = new Particle();
 for(int i = 0; i < 10; i++){
     circles[i] = new OddballParticle();
